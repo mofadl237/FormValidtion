@@ -37,7 +37,7 @@ if (window.location.pathname == "/index.html") {
       }
     });
   }
-
+  
   if (localStorage.getItem("userName") != undefined) {
     userName = localStorage.getItem("userName");
     user.innerHTML = userName;
@@ -48,7 +48,6 @@ if (window.location.pathname == "/index.html") {
     btn_Login.innerHTML = "Log in";
     btn_Register.style.cssText = `opacity:1;`;
   }
-  
   user.innerHTML = userName;
 
 }
