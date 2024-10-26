@@ -67,7 +67,7 @@ function validConfirm() {
   return status;
 }
 //3- add Event For Each Input
-if (window.location.pathname == "/assets/HTML/Register.html") {
+if (window.location.pathname == "assets/HTML/Register.html" || window.location.pathname == "/assets/HTML/Register.html") {
   nameInput.addEventListener("blur", validName);
   nameInput.addEventListener("input", validName);
 
