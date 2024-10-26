@@ -20,7 +20,7 @@ if (window.location.pathname == "/index.html") {
 
   if (btn_Register) {
     btn_Register.addEventListener("click", () =>
-      window.location.assign("assets/HTML/Register.html")
+        window.open("assets/HTML/Register.html", "_blank")
     );
   }
 
