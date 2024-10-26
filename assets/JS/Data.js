@@ -18,17 +18,17 @@ let indexUser = 0; //Use Login Search Or Delete Account
 let is_Login = false;
 if (window.location.pathname == "/index.html") {
 
-  if (btn_Register) {
-    btn_Register.addEventListener("click", () =>
-        window.open("assets/HTML/Register.html", "_blank")
-    );
-  }
+//   if (btn_Register) {
+//     btn_Register.addEventListener("click", () =>
+//         window.open("assets/HTML/Register.html", "_blank")
+//     );
+//   }
 
   if (btn_Login) {
     btn_Login.addEventListener("click", () => {
       if (is_Login) {
         is_Login = false;
-        btn_Login.innerHTML = "Log in";
+        btn_Login.textContent = "Log in";
         btn_Register.style.cssText = `opacity:1;`;
         localStorage.removeItem("userName");
         window.location.assign("/index.html");
@@ -41,7 +41,7 @@ if (window.location.pathname == "/index.html") {
   if (localStorage.getItem("userName") != undefined) {
     userName = localStorage.getItem("userName");
     user.innerHTML = userName;
-    btn_Login.innerHTML = "Log Out";
+    btn_Login.textContent = "Log Out";
     is_Login = true;
     btn_Register.style.cssText = `opacity:0;`;
   } else {
