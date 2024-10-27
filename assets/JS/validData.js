@@ -93,7 +93,7 @@ function getData() {
 }
 
 function Register(e) {
-  e.preventDefault();
+  //e.preventDefault();
   //check    validName() && validConfirm() && validEmail() && validPass()
   if (validName() && validConfirm() && validEmail() && validPass()) {
     let newUser = getData();
@@ -101,6 +101,6 @@ function Register(e) {
     localStorage.setItem("DataUser", JSON.stringify(AllData));
     localStorage.setItem("userName", newUser.name);
     localStorage.setItem("indexUser", 1);
-    window.location.assign("/index.html");
+    
   }
 }

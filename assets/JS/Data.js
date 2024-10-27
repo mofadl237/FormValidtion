@@ -13,10 +13,10 @@ let AllData = [
 if (localStorage.getItem("DataUser") == undefined) {
   localStorage.setItem("DataUser", JSON.stringify(AllData));
 }
-let userName = "initial val";
+let userName = "User Name";
 let indexUser = 0; //Use Login Search Or Delete Account
 let is_Login = false;
-if (window.location.pathname == "/index.html") {
+if (window.location.pathname == "/index.html" || window.location.pathname == "/FormValidtion/") {
 
 //   if (btn_Register) {
 //     btn_Register.addEventListener("click", () =>
@@ -31,7 +31,6 @@ if (window.location.pathname == "/index.html") {
         btn_Login.textContent = "Log in";
         btn_Register.style.cssText = `opacity:1;`;
         localStorage.removeItem("userName");
-        window.location.assign("/index.html");
       } else {
         window.location.assign("assets/HTML/Login.html");
       }
